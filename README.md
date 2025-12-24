@@ -30,39 +30,6 @@ This project demonstrates **REST API best practices**, **backend caching**, and 
 
 ---
 
-## 🧠 Architecture Overview
-╔════════════════════════════════════════════════════════════╗
-║                    React Frontend                          ║
-║              (Vite + Tailwind CSS)                         ║
-║              http://localhost:5173                         ║
-╚═══════════════════════╦════════════════════════════════════╝
-                        ║
-                        ║ HTTP (REST)
-                        ▼
-╔════════════════════════════════════════════════════════════╗
-║                 Spring Boot Backend                        ║
-║                  REST API Layer                            ║
-║              http://localhost:8080                         ║
-║                                                            ║
-║  • Caffeine Caching  • DTO Mapping  • REST Validation     ║
-╚═══════════════════════╦════════════════════════════════════╝
-                        ║
-                        ║ External API Calls
-                        ▼
-╔════════════════════════════════════════════════════════════╗
-║              TheMealDB Public API                          ║
-║           https://www.themealdb.com                        ║
-║               /api/json/v1/1                               ║
-╚════════════════════════════════════════════════════════════╝
-
-
-### Why this architecture?
-- Frontend never calls external APIs directly
-- Backend controls caching, API structure, and error handling
-- Clean separation of concerns
-- Easy to extend or replace the external API later
-
----
 
 ## 📡 Backend API Endpoints
 
